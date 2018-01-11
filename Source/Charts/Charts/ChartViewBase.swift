@@ -88,7 +88,7 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
     /// color of the no data text
     @objc open var noDataTextColor: NSUIColor = NSUIColor.black
     
-    internal var _legendRenderer: LegendRenderer!
+    open var _legendRenderer: LegendRenderer!
     
     /// object responsible for rendering the data
     @objc open var renderer: DataRenderer?
@@ -160,7 +160,7 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
         self.removeObserver(self, forKeyPath: "frame")
     }
     
-    internal func initialize()
+    open func initialize()
     {
         #if os(iOS)
             self.backgroundColor = NSUIColor.clear
